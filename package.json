@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "svgo": "^3.3.2"
+  },
+  "scripts": {
+    "clean:svg": "svgo -f frontend/src/assets/images -o frontend/src/assets/images"
+  },
+  "dependencies": {
+    "react-router-dom": "^7.6.2"
+  }
+}
