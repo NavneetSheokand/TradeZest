@@ -11,7 +11,7 @@ const BuyActionWindow = ({ uid }) => {
   const {
     fetchOrders,
     fetchHoldings,
-    closeBuyWindow, // ✅ Extract this correctly
+    closeBuyWindow, 
   } = useContext(GeneralContext);
 
   const handleBuyClick = () => {
@@ -27,8 +27,7 @@ const BuyActionWindow = ({ uid }) => {
     console.log("Response from backend:", response.data);
     fetchOrders();
     fetchHoldings();
-    closeBuyWindow(); // You might want to call closeBuyWindow from context
-  })
+    closeBuyWindow(); 
   .catch((error) => {
     console.error("Buy error:", error.response ? error.response.data : error.message);
   });
@@ -36,7 +35,7 @@ const BuyActionWindow = ({ uid }) => {
 
 
   const handleCancelClick = () => {
-    closeBuyWindow(); // ✅ correct call
+    closeBuyWindow(); // 
   };
 
   return (
